@@ -2,7 +2,7 @@
 import os
 import platform
 from UI.util_funcs import FileExists, ArmSystem, ReadTheFileContent
-from pyaria2_rpc.pyaria2 import Xmlrpc
+from pyaria2_rpc.pyaria2 import PyAria2
 
 CurKeySet = "GameShell" ## >>>    PC or GameShell   <<<
 
@@ -89,7 +89,7 @@ def PreparationInAdv():
     else:
         GlobalScale = 1
     
-    RPC = Xmlrpc('localhost', 6800)
+    RPC = PyAria2('localhost', 6800)
 PreparationInAdv()
 ##sys.py/.powerlevel
 
