@@ -6,7 +6,7 @@ from sys import exit
 import os
 import sys
 
-from skin_manager import MySkinManager
+from UI.skin_manager import MySkinManager
 ##pool only store surfaces
 
 class IconPool(object):
