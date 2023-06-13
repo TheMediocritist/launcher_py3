@@ -3,22 +3,21 @@ import os
 import dbus
 import dbus.service
 import sys
-import commands
+#import commands
 import logging
 import errno
 
-from wicd import misc
+#from wicd import misc
 import libs.websocket as websocket
 ##misc.to_bool
 ##misc.misc.noneToString
 ##misc.to_unicode
 ##misc.Noneify
-from wicd.translations import _
-from wicd import wpath
-from wicd import dbusmanager
+#from wicd.translations import _
+#from wicd import wpath
+#from wicd import dbusmanager
 import time
 import gobject
-
 
 import socket
 import pygame
@@ -33,7 +32,7 @@ else:
     from dbus.mainloop.glib import DBusGMainLoop
     DBusGMainLoop(set_as_default=True)
 
-import config
+import UI.config
 #local UI import
 from UI.constants    import Width,Height,icon_width,icon_height,DT,RUNEVT,RUNSYS,ICON_TYPES,POWEROPT,RESTARTUI,RUNSH
 from UI.util_funcs   import ReplaceSuffix,FileExists, ReadTheFileContent,midRect,color_surface,SwapAndShow,GetExePath,X_center_mouse,ArmSystem
@@ -57,17 +56,11 @@ if not pygame.font.get_init():
     pygame.font.init()
 
 gobject_main_loop = None
-
 sound_patch = None
-
 myscriptname = os.path.basename(os.path.realpath(__file__))
-
 everytime_keydown = time.time()
-
 passout_time_stage = 0
-
 last_brt = -1
-
 gobject_flash_led1 = -1
 gobject_flash_led1_counter = 0
 
@@ -138,7 +131,6 @@ def GobjectFlashLed1(main_screen):
     
     return True
 
-    
 def RestoreLastBackLightBrightness(main_screen):
     global last_brt,passout_time_stage,gobject_flash_led1
 
@@ -288,8 +280,6 @@ def RecordKeyDns(thekey,main_screen):
     
     return False
 
-
-
 def release_self_fds():
     fds_flags= ["pipe","socket",".ttf"]
     """List process currently open FDs and their target """
@@ -315,7 +305,6 @@ def release_self_fds():
             os.close(key)
             break
     return ret  
-
   
 def event_process(event,main_screen):
     global sound_patch

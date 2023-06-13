@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 import os
 import platform
-from UI.util_funcs   import FileExists,ArmSystem,ReadTheFileContent
+from UI.util_funcs import FileExists, ArmSystem, ReadTheFileContent
 from pyaria2_rpc.pyaria2 import Xmlrpc
 
 CurKeySet = "GameShell" ## >>>    PC or GameShell   <<<

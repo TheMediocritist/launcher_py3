@@ -76,32 +76,32 @@ def on_message(ws, message):
     #uncompress the game into destnation folder in the game_install_thread
     aria2_noti = json.loads(message)
     if "method" in aria2_noti and aria2_noti["method"] == "aria2.onDownloadError":
-         gid = aria2_noti["params"][0]["gid"]
-         msg = rpc.tellStatus(gid)
-         ws.send(msg)
+        gid = aria2_noti["params"][0]["gid"]
+        msg = rpc.tellStatus(gid)
+        ws.send(msg)
 
     if "method" in aria2_noti and aria2_noti["method"] == "aria2.onDownloadComplete":
-         gid = aria2_noti["params"][0]["gid"]
-         msg = rpc.tellStatus(gid)
-         ws.send(msg)
-         #game_install_thread(gid)
+        gid = aria2_noti["params"][0]["gid"]
+        msg = rpc.tellStatus(gid)
+        ws.send(msg)
+        #game_install_thread(gid)
     
     if "method" not in aria2_noti and "result" in aria2_noti:
         result = aria2_noti["result"]
         if "status" in result:
-             if result["status"] == "error":
-                 try:
-                     print(result["errorMessage"])
-                     for x in result["files"]:
-                         if os.path.exists(x["path"]):
-                             os.remove(x["path"])
-                         if os.path.exists(x["path"]+".aria2"):
-                             os.remove(x["path"]+".aria2")
+            if result["status"] == "error":
+                try:
+                    print(result["errorMessage"])
+                    for x in result["files"]:
+                        if os.path.exists(x["path"]):
+                            os.remove(x["path"])
+                        if os.path.exists(x["path"]+".aria2"):
+                            os.remove(x["path"]+".aria2")
 
-                 except Exception as ex:
-                     print(ex)
-             if result["status"] == "complete":
-                 game_install_thread(result)
+                except Exception as ex:
+                    print(ex)
+            if result["status"] == "complete":
+                game_install_thread(result)
 
        
 def on_error(ws, error):
@@ -122,16 +122,13 @@ def create_connection(db_file):
         print(e)
  
     return conn
- 
- 
+  
 def create_table(conn, create_table_sql):
     try:
         c = conn.cursor()
         c.execute(create_table_sql)
     except Error as e:
         print(e)
-
-
 
 def init_sqlite3():
     global aria2_db
