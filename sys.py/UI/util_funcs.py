@@ -10,9 +10,9 @@ import subprocess
 #import base64
 #from beeprint import pp
 import string
-from Xlib import X,display
+from Xlib import X, display
 import config
-from constants   import Width,Height
+from UI.constants import Width, Height
 
 def get_git_revision_hash():
     return subprocess.check_output(['git', 'rev-parse', 'HEAD'])
