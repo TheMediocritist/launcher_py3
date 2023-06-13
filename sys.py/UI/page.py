@@ -17,11 +17,11 @@ from libs import easing
 
 # local import
 from UI.constants import ALIGN, icon_width, icon_height, Width, Height, ICON_TYPES
-from util_funcs import midRect,FileExists
-from keys_def import CurKeys, IsKeyStartOrA, IsKeyMenuOrB
-from icon_pool import MyIconPool
-from lang_manager import MyLangManager
-from widget import Widget
+from UI.util_funcs import midRect,FileExists
+from UI.keys_def import CurKeys, IsKeyStartOrA, IsKeyMenuOrB
+from UI.icon_pool import MyIconPool
+from UI.lang_manager import MyLangManager
+from UI.widget import Widget
 import config
 
 class PageStack:
