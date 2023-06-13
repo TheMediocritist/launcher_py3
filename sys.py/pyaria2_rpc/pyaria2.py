@@ -26,48 +26,48 @@ class Xmlrpc(object):
 
     def addUri(self,uris, options=None):#aria2.addUri(['http://example.org/file'], {})
         try:
-	        if isinstance(uris, basestring):
+            if isinstance(uris, basestring):
                 return self.aria2.addUri([uris],options)
-	        else:
+            else:
                 return self.aria2.addUri(uris,options)
         except xmlrpclib.Fault as ex:
             print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
             return None
-
+    
     def tellStatus(self,gid,keys=None):#aria2.tellStatus("2089b05ecca3d829", ["gid", "status"])
-	    try:
-	        return self.aria2.tellStatus(gid,keys)
+        try:
+            return self.aria2.tellStatus(gid,keys)
         except xmlrpclib.Fault as ex:
             print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
             return None
 
     def tellActive(self,keys=None):
-	    try:
-	        return self.aria2.tellActive(keys)
+        try:
+            return self.aria2.tellActive(keys)
         except xmlrpclib.Fault as ex:
             print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
             return None
 
     def tellWaiting(self,offset=0,num=0,keys=None):
-	    try:
-	        return self.aria2.tellWaiting(offet,num,keys)
+        try:
+            return self.aria2.tellWaiting(offet,num,keys)
         except xmlrpclib.Fault as ex:
             print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
             return None
 
     def tellStopped(self,offset=0,num=0,keys=None):
-	    try:
-	        return self.aria2.tellStopped(offset,num,keys)
+        try:
+            return self.aria2.tellStopped(offset,num,keys)
         except xmlrpclib.Fault as ex:
             print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
             return None
             
     def remove(self,gid):
-	    try:
-	        return self.aria2.remove(gid)
-	    except xmlrpclib.Fault as ex:
-	        print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
-	        return None
+        try:
+            return self.aria2.remove(gid)
+        except xmlrpclib.Fault as ex:
+            print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
+            return None
 
     def forceRemove(self,gid):
 	    try:
