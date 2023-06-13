@@ -80,7 +80,7 @@ def PreparationInAdv():
     
     if FileExists(FB_Modes):
         modes = ReadTheFileContent(FB_Modes)
-        if "320x240" in modes:
+        if "400x240" in modes:
             GlobalScale = 1
         if "640x480" in modes:
             GlobalScale = 2

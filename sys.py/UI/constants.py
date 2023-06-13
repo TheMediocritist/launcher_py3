@@ -14,7 +14,7 @@ from pygame.locals import *
 #UI lib
 
 
-Width = 320
+Width = 400
 Height = 240
 
 icon_width  = 80

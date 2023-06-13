@@ -187,7 +187,7 @@ local function set_wallpaper(s)
         end
 
 				-- wallpaper only in PC
-        if s.geometry.width > 320 then
+        if s.geometry.width > 400 then
 	        gears.wallpaper.centered(wallpaperpc, s, 1)
 	      end
 
@@ -251,7 +251,7 @@ awful.screen.connect_for_each_screen(function(s)
     s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags_without_gs, tasklist_buttons)
 
     -- Create the wibox
-		if s.geometry.width > 320 then	
+		if s.geometry.width > 400 then	
 	    s.mywibox = awful.wibar({ position = "bottom", screen = s,visible=true })
 		else
 			s.mywibox = awful.wibar({ position = "bottom", screen = s,visible=false })
@@ -389,7 +389,7 @@ client.connect_signal("manage", function (c)
 	end
 	
 	for s in capi.screen do	
-		if s.geometry.width > 320 then
+		if s.geometry.width > 400 then
 			for _,v in pairs(gs_class) do
 				if tableHasKey(c,"class") and c.class:lower() == v then
 					awful.titlebar.hide(c)

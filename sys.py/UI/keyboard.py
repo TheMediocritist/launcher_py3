@@ -246,7 +246,7 @@ class Keyboard(Page):
         current_time = 0.0
         start_posx   = 0.0
         current_posx = start_posx
-        final_posx   = 320.0
+        final_posx   = 400.0
         posx_init    = 0.0
         dur          = 30
         last_posx    = 0.0 

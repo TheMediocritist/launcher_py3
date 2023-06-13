@@ -118,7 +118,7 @@ class Page(Widget):
         bg_img_path = config.SKIN+"/background.png"
 
         if FileExists(bg_img_path):
-            self._Wallpaper = pygame.transform.scale(pygame.image.load(bg_img_path).convert(), (320,240))  
+            self._Wallpaper = pygame.transform.scale(pygame.image.load(bg_img_path).convert(), (400,240))  
         
     def AdjustHLeftAlign(self): ## adjust coordinator and append the PageSelector
         self._PosX = self._Index*self._Screen._Width

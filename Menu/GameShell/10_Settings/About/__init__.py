@@ -86,7 +86,7 @@ class AboutPage(Page):
 
     _Scrolled = 0
     
-    _BGwidth = 320
+    _BGwidth = 400
     _BGheight = 300
 
     _DrawOnce = False

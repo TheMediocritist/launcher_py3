@@ -32,7 +32,7 @@ else:
     from dbus.mainloop.glib import DBusGMainLoop
     DBusGMainLoop(set_as_default=True)
 
-import UI.config
+import config
 #local UI import
 from UI.constants    import Width,Height,icon_width,icon_height,DT,RUNEVT,RUNSYS,ICON_TYPES,POWEROPT,RESTARTUI,RUNSH
 from UI.util_funcs   import ReplaceSuffix,FileExists, ReadTheFileContent,midRect,color_surface,SwapAndShow,GetExePath,X_center_mouse,ArmSystem

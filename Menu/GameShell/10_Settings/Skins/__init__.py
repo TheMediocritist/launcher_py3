@@ -81,7 +81,7 @@ class SkinsPage(Page):
 
     _Scrolled = 0
     
-    _BGwidth = 320
+    _BGwidth = 400
     _BGheight = 240-24-20
 
     _DrawOnce = False
