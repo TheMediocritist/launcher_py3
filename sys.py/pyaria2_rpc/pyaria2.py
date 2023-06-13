@@ -99,7 +99,7 @@ class Xmlrpc(object):
 
     def getUris(self,gid):
         try:
-	       return self.aria2.getUris(gid)
+            return self.aria2.getUris(gid)
         except xmlrpclib.Fault as ex:
             print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
             return None
