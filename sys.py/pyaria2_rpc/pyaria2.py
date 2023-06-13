@@ -28,7 +28,7 @@ class Xmlrpc(object):
     def getOption(self, gid):
         try:
             return self.aria2.getOption(gid)
-        except xmlrpclib.Fault, ex:
+        except xmlrpclib.Fault as ex:
             print '<Fault {}: {}>'.format(ex.faultCode, ex.faultString)
             return None
 
@@ -38,21 +38,21 @@ class Xmlrpc(object):
                 return self.aria2.addUri([uris], options)
             else:
                 return self.aria2.addUri(uris, options)
-        except xmlrpclib.Fault, ex:
+        except xmlrpclib.Fault as ex:
             print '<Fault {}: {}>'.format(ex.faultCode, ex.faultString)
             return None
 
     def tellStatus(self, gid, keys=None):  # aria2.tellStatus("2089b05ecca3d829", ["gid", "status"])
         try:
             return self.aria2.tellStatus(gid, keys)
-        except xmlrpclib.Fault, ex:
+        except xmlrpclib.Fault as ex:
             print '<Fault {}: {}>'.format(ex.faultCode, ex.faultString)
             return None
 
     def tellActive(self, keys=None):
         try:
             return self.aria2.tellActive(keys)
-        except xmlrpclib.Fault, ex:
+        except xmlrpclib.Fault as ex:
             print '<Fault {}: {}>'.format(ex.faultCode, ex.faultString)
             return None
 
@@ -64,7 +64,7 @@ class Xmlrpc(object):
         ):
         try:
             return self.aria2.tellWaiting(offet, num, keys)
-        except xmlrpclib.Fault, ex:
+        except xmlrpclib.Fault as ex:
             print '<Fault {}: {}>'.format(ex.faultCode, ex.faultString)
             return None
 
@@ -76,49 +76,49 @@ class Xmlrpc(object):
         ):
         try:
             return self.aria2.tellStopped(offset, num, keys)
-        except xmlrpclib.Fault, ex:
+        except xmlrpclib.Fault as ex:
             print '<Fault {}: {}>'.format(ex.faultCode, ex.faultString)
             return None
 
     def remove(self, gid):
         try:
             return self.aria2.remove(gid)
-        except xmlrpclib.Fault, ex:
+        except xmlrpclib.Fault as ex:
             print '<Fault {}: {}>'.format(ex.faultCode, ex.faultString)
             return None
 
     def forceRemove(self, gid):
         try:
             return self.aria2.forceRemove(gid)
-        except xmlrpclib.Fault, ex:
+        except xmlrpclib.Fault as ex:
             print '<Fault {}: {}>'.format(ex.faultCode, ex.faultString)
             return None
 
     def getGlobalStat(self):
         try:
             return self.aria2.getGlobalStat()
-        except xmlrpclib.Fault, ex:
+        except xmlrpclib.Fault as ex:
             print '<Fault {}: {}>'.format(ex.faultCode, ex.faultString)
             return None
 
     def purgeDownloadResult(self):
         try:
             return self.aria2.purgeDownloadResult()
-        except xmlrpclib.Fault, ex:
+        except xmlrpclib.Fault as ex:
             print '<Fault {}: {}>'.format(ex.faultCode, ex.faultString)
             return None
 
     def removeDownloadResult(self, gid):
         try:
             return self.aria2.removeDownloadResult(gid)
-        except xmlrpclib.Fault, ex:
+        except xmlrpclib.Fault as ex:
             print '<Fault {}: {}>'.format(ex.faultCode, ex.faultString)
             return None
 
     def getUris(self, gid):
         try:
             return self.aria2.getUris(gid)
-        except xmlrpclib.Fault, ex:
+        except xmlrpclib.Fault as ex:
             print '<Fault {}: {}>'.format(ex.faultCode, ex.faultString)
             return None
 
