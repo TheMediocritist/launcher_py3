@@ -14,94 +14,95 @@ class Xmlrpc(object):
         self.host = host
         self.port = port
         self.serverUrl = "http://{host}:{port}/rpc".format(**locals())
-        self.s = xmlrpclib.ServerProxy(self.serverUrl,allow_none=True)
-        self.aria2 = self.s.aria2
+    self.s = xmlrpclib.ServerProxy(self.serverUrl,allow_none=True)
+    self.aria2 = self.s.aria2
 
     def getOption(self,gid):
-        try:
-            return self.aria2.getOption(gid)
-        except xmlrpclib.Fault as ex:
-            print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
-            return None
+    try:
+        return self.aria2.getOption(gid)
+    except xmlrpclib.Fault as ex:
+        print "<Fault %s: %s>" % (ex.faultCode, ex.faultString)
+        return None
 
     def addUri(self,uris, options=None):#aria2.addUri(['http://example.org/file'], {})
         try:
-            if isinstance(uris, basestring):
+        if isinstance(uris, basestring):
                 return self.aria2.addUri([uris],options)
-            else:
+        else:
                 return self.aria2.addUri(uris,options)
+
         except xmlrpclib.Fault as ex:
-            print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
+            print "<Fault %s: %s>" % (ex.faultCode, ex.faultString)
             return None
-    
+
     def tellStatus(self,gid,keys=None):#aria2.tellStatus("2089b05ecca3d829", ["gid", "status"])
-        try:
-            return self.aria2.tellStatus(gid,keys)
+    try:
+        return self.aria2.tellStatus(gid,keys)
         except xmlrpclib.Fault as ex:
-            print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
+            print "<Fault %s: %s>" % (ex.faultCode, ex.faultString)
             return None
 
     def tellActive(self,keys=None):
-        try:
-            return self.aria2.tellActive(keys)
+    try:
+        return self.aria2.tellActive(keys)
         except xmlrpclib.Fault as ex:
-            print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
+            print "<Fault %s: %s>" % (ex.faultCode, ex.faultString)
             return None
 
     def tellWaiting(self,offset=0,num=0,keys=None):
-        try:
-            return self.aria2.tellWaiting(offet,num,keys)
+    try:
+        return self.aria2.tellWaiting(offet,num,keys)
         except xmlrpclib.Fault as ex:
-            print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
+            print "<Fault %s: %s>" % (ex.faultCode, ex.faultString)
             return None
 
     def tellStopped(self,offset=0,num=0,keys=None):
-        try:
-            return self.aria2.tellStopped(offset,num,keys)
+    try:
+        return self.aria2.tellStopped(offset,num,keys)
         except xmlrpclib.Fault as ex:
-            print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
+            print "<Fault %s: %s>" % (ex.faultCode, ex.faultString)
             return None
-            
+
     def remove(self,gid):
-        try:
-            return self.aria2.remove(gid)
-        except xmlrpclib.Fault as ex:
-            print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
-            return None
+    try:
+        return self.aria2.remove(gid)
+    except xmlrpclib.Fault as ex:
+        print "<Fault %s: %s>" % (ex.faultCode, ex.faultString)
+        return None
 
     def forceRemove(self,gid):
-        try:
-            return self.aria2.forceRemove(gid)
-        except xmlrpclib.Fault as ex:
-            print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
-            return None
+    try:
+        return self.aria2.forceRemove(gid)
+    except xmlrpclib.Fault as ex:
+        print "<Fault %s: %s>" % (ex.faultCode, ex.faultString)
+        return None
 
     def getGlobalStat(self):
-        try:
-            return self.aria2.getGlobalStat()
-        except xmlrpclib.Fault as ex:
-            print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
-            return None
+    try:
+        return self.aria2.getGlobalStat()
+    except xmlrpclib.Fault as ex:
+        print "<Fault %s: %s>" % (ex.faultCode, ex.faultString)
+        return None
 
     def purgeDownloadResult(self):
-        try:
-            return self.aria2.purgeDownloadResult()
-        except xmlrpclib.Fault as ex:
-            print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
-            return None
+    try:
+        return self.aria2.purgeDownloadResult()
+    except xmlrpclib.Fault as ex:
+        print "<Fault %s: %s>" % (ex.faultCode, ex.faultString)
+        return None
 
     def removeDownloadResult(self,gid):
-        try:
-            return self.aria2.removeDownloadResult(gid)
-        except xmlrpclib.Fault as ex:
-            print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
-            return None
+    try:
+        return self.aria2.removeDownloadResult(gid)
+    except xmlrpclib.Fault as ex:
+        print "<Fault %s: %s>" % (ex.faultCode, ex.faultString)
+        return None
 
     def getUris(self,gid):
         try:
-            return self.aria2.getUris(gid)
+        return self.aria2.getUris(gid)
         except xmlrpclib.Fault as ex:
-            print("<Fault {}: {}>".format(ex.faultCode, ex.faultString))
+            print "<Fault %s: %s>" % (ex.faultCode, ex.faultString)
             return None
 
     def urlDownloading(self,url):
@@ -178,7 +179,7 @@ class Wsrpc(object):
         
         for i in params:
             if i is not None:
-                p['params'].append(i)
+        p['params'].append(i)
 
         return p
 
@@ -253,16 +254,16 @@ class Jsonrpc(object):
         
         for i in params:
             if i is not None:
-                p['params'].append(i)
+        p['params'].append(i)
 
         return p
 
     def _post(self, action, params, onSuccess, onFail=None):
         if onFail is None:
             onFail = Jsonrpc._defaultErrorHandle
-        print(params)
+    print params
         paramsObject = self._genParams(action, params)
-        print(paramsObject)
+        print paramsObject 
         resp = requests.post(self.serverUrl, data=json.dumps(paramsObject))
         result = resp.json()
         if "error" in result:
@@ -322,6 +323,7 @@ class Jsonrpc(object):
         def success(response):
             return response
         return self._post(Jsonrpc.REMOVEDOWNLOADRESULT_METHOD,[gid],success)
+
 
     @staticmethod
     def _defaultErrorHandle(code, message):
