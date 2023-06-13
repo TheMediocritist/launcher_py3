@@ -2,11 +2,11 @@
 import os
 import pygame
 import config
-import ConfigParser
-from skin_manager import MySkinManager
-from util_funcs  import FileExists
+import configparser
+from UI.skin_manager import MySkinManager
+from UI.util_funcs  import FileExists
 
-class CaseConfigParser(ConfigParser.SafeConfigParser):
+class Caseconfigparser(configparser.Safeconfigparser):
     def optionxform(self, optionstr):
         return optionstr
 
@@ -42,7 +42,7 @@ class LangManager(object):
         return self._CJKMode
         
     def SetLangs(self):
-        self._Config = CaseConfigParser()
+        self._Config = Caseconfigparser()
         #print("SetLangs")
         fname = ".lang"
         

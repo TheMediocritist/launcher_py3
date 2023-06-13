@@ -2,11 +2,11 @@
 
 import pygame
 import config
-import ConfigParser
+import configparser
 
 from UI.util_funcs  import FileExists
 
-class CaseConfigParser(ConfigParser.SafeConfigParser):
+class Caseconfigparser(configparser.Safeconfigparser):
     def optionxform(self, optionstr):
         return optionstr
 
@@ -31,7 +31,7 @@ class SkinManager(object):
     
     def configExists(self):
         if FileExists(config.SKIN+"/config.ini"):
-            self._Config = CaseConfigParser()
+            self._Config = Caseconfigparser()
             fname = config.SKIN+"/config.ini"        
             try:
                 return self._Config.read(fname)
@@ -114,7 +114,7 @@ class SkinManager(object):
                         try:
                             Colors[i] = self.ConvertToRGB(
                                 self._Config.get("Colors", i))
-                        except Exception as e:
+                        except n as e:
                             print("error in ConvertToRGB %s" % str(e))
                             continue
         
