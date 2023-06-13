@@ -178,7 +178,7 @@ class Wsrpc(object):
         
         for i in params:
             if i is not None:
-        p['params'].append(i)
+                p['params'].append(i)
 
         return p
 
