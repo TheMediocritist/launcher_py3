@@ -14,8 +14,8 @@ class Xmlrpc(object):
         self.host = host
         self.port = port
         self.serverUrl = "http://{host}:{port}/rpc".format(**locals())
-	    self.s = xmlrpclib.ServerProxy(self.serverUrl,allow_none=True)
-	    self.aria2 = self.s.aria2
+        self.s = xmlrpclib.ServerProxy(self.serverUrl,allow_none=True)
+        self.aria2 = self.s.aria2
 
     def getOption(self,gid):
 	    try:
