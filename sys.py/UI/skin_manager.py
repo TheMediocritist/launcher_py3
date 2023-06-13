@@ -4,7 +4,7 @@ import pygame
 import config
 import ConfigParser
 
-from util_funcs  import FileExists
+from UI.util_funcs  import FileExists
 
 class CaseConfigParser(ConfigParser.SafeConfigParser):
     def optionxform(self, optionstr):
@@ -35,7 +35,7 @@ class SkinManager(object):
             fname = config.SKIN+"/config.ini"        
             try:
                 return self._Config.read(fname)
-            except Exception, e:
+            except Exception as e:
                 print("skin config.ini read error %s" % str(e))
                 return
         else:
@@ -70,7 +70,7 @@ class SkinManager(object):
                     if i in font_opts:
                         try:
                             fonts_path[i] = skinpath+"/"+self._Config.get("Font_Paths", i)+".ttf"
-                        except Exception, e:
+                        except Exception as e:
                             print("error in Font_Paths %s" % str(e))
                             continue
         
@@ -114,7 +114,7 @@ class SkinManager(object):
                         try:
                             Colors[i] = self.ConvertToRGB(
                                 self._Config.get("Colors", i))
-                        except Exception, e:
+                        except Exception as e:
                             print("error in ConvertToRGB %s" % str(e))
                             continue
         
