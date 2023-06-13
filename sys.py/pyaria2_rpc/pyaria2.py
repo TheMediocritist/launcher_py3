@@ -260,9 +260,9 @@ class Jsonrpc(object):
     def _post(self, action, params, onSuccess, onFail=None):
         if onFail is None:
             onFail = Jsonrpc._defaultErrorHandle
-    print params
+        print(params)
         paramsObject = self._genParams(action, params)
-        print paramsObject 
+        print(paramsObject)
         resp = requests.post(self.serverUrl, data=json.dumps(paramsObject))
         result = resp.json()
         if "error" in result:
