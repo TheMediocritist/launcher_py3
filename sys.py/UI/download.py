@@ -2,11 +2,11 @@ import os
 import pycurl
 import sys
 import time
-import urllib2
 import hashlib
-
 from threading import Thread
-from StringIO import StringIO
+from io import BytesIO
+from urllib.request import urlopen
+from urllib.error import URLError
 
 class Download(Thread):
     _dst_path = ""
@@ -41,12 +41,11 @@ class Download(Thread):
         return self._errors
 
     def run(self):
+        def run(self):
         c = pycurl.Curl()
         c.setopt(pycurl.URL, self.url)
         c.setopt(pycurl.FOLLOWLOCATION, True)
         c.setopt(pycurl.MAXREDIRS, 4)
-        #c.setopt(pycurl.NOBODY, 1)
-
         c.setopt(c.VERBOSE, True)
 
         #c.setopt(pycurl.CONNECTTIMEOUT, 20)
@@ -79,7 +78,7 @@ class Download(Thread):
         if os.path.exists(filepath):## remove old file,restart download 
             os.system("rm -rf " + filepath)
         
-        buffer = StringIO() 
+        buffer = BytesIO()
         c.setopt(pycurl.WRITEDATA, buffer)
         
         self._dst_path = filepath
@@ -94,7 +93,7 @@ class Download(Thread):
         try:
             c.perform()
         except pycurl.error as error:
-            errno,errstr = error
+            errno, errstr = error
             print("curl error: %s" % errstr)
             self._errors.append(errstr)
             self._stop = True
@@ -106,7 +105,7 @@ class Download(Thread):
             c.close()            
             self._is_finished = True
 
-            with open(filepath, mode='w') as f:
+            with open(filepath, mode='wb') as f:
                 f.write(buffer.getvalue())
 
             if self.progress["percent"] < 100:
@@ -137,12 +136,13 @@ class Download(Thread):
             self.progress["stopped"] = True
             return 1
     
-    def hashlib_hash(method,fname): #eg: method == hashlib.md5(),function pointer
-        hash_ = method
+    #@staticmethod
+    def hashlib_hash(method, fname):
+        hash_ = method()
         with open(fname, "rb") as f:
             for chunk in iter(lambda: f.read(4096), b""):
                 hash_.update(chunk)
-
+    
         return hash_.hexdigest()
 
     def add_hash_verification(self,method_name,method_value):
@@ -195,7 +195,7 @@ def main():
                 
                 last_downloaded = d.progress["downloaded"]
                 
-                if d.progress["stopped"] == True:
+                if d.progress["stopped"]:
                     break
 
                 print("%.2f percent | %d of %d | %.1f KB/s" % (progress, d.progress['downloaded'], d.progress['total'], speed))
@@ -211,7 +211,7 @@ def main():
             except KeyboardInterrupt:
                 d.cancel()
                 break
-
+            
             except:
                 raise
             
