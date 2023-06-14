@@ -10,7 +10,7 @@ from UI.util_funcs import FileExists,midRect
 from UI.icon_item  import IconItem
 from UI.multi_icon_item import MultiIconItem
 from UI.icon_pool  import MyIconPool
-from UI.libs.roundrects import aa_round_rect
+from libs.roundrects import aa_round_rect
 from UI.lang_manager import MyLangManager
 from UI.widget      import Widget
 from UI.skin_manager import MySkinManager
