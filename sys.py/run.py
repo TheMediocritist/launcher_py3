@@ -468,7 +468,7 @@ def gobject_pygame_event_timer(main_screen):
     
     return True 
 
-@misc.threaded
+#@misc.threaded
 def aria2_ws(main_screen):
     def on_message(ws, message):
         print("run.py aria2_ws on_message: ",message)
