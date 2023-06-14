@@ -6,13 +6,13 @@ import shutil
 
 
 #UI lib
-from constants import Width,Height,ICON_TYPES
-from page   import Page,PageSelector
-from label  import Label
-from util_funcs import midRect
-from keys_def   import CurKeys, IsKeyStartOrA, IsKeyMenuOrB
-from confirm_page import ConfirmPage
-from lang_manager import MyLangManager
+from UI.constants import Width,Height,ICON_TYPES
+from UI.page   import Page,PageSelector
+from UI.label  import Label
+from UI.util_funcs import midRect
+from UI.keys_def   import CurKeys, IsKeyStartOrA, IsKeyMenuOrB
+from UI.confirm_page import ConfirmPage
+from UI.lang_manager import MyLangManager
 
 class DeleteConfirmPage(ConfirmPage):
 
