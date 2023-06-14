@@ -93,7 +93,7 @@ class Download(Thread):
         # download file
         try:
             c.perform()
-        except pycurl.error, error:
+        except pycurl.error as error:
             errno,errstr = error
             print("curl error: %s" % errstr)
             self._errors.append(errstr)
