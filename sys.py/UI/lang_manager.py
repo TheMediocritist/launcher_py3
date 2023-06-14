@@ -6,7 +6,7 @@ import configparser
 from UI.skin_manager import MySkinManager
 from UI.util_funcs  import FileExists
 
-class Caseconfigparser(configparser.configparser):
+class Caseconfigparser(configparser.ConfigParser):
     def optionxform(self, optionstr):
         return optionstr
 
