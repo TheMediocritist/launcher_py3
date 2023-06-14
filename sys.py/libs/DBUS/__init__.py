@@ -4,15 +4,15 @@ import dbus
 import dbus.service
 
 import sys
-from wicd import misc 
+#from wicd import misc 
 ##misc.to_bool
 ##misc.misc.noneToString
 ##misc.to_unicode
 ##misc.Noneify
-from wicd.translations import _
-from wicd import wpath
-from wicd import dbusmanager
-from wicd import misc
+#from wicd.translations import _
+#from wicd import wpath
+#from wicd import dbusmanager
+#from wicd import misc
 
 import time
 import gobject
@@ -29,39 +29,39 @@ manager = objects = adapter  = None
 devices = {}
 
 def setup_dbus(force=True):
-    global bus,daemon,wireless,wired
-    global manager,objects,adapter,devices
-    
-    try:
-        dbusmanager.connect_to_dbus()
-    except dbus.DBusException:
-        print >> sys.stderr,\
-            _("Can't connect to wicd daemon,trying to start it automatically...")
-    else:
-        bus = dbusmanager.get_bus()
-        dbus_ifaces = dbusmanager.get_dbus_ifaces()
-        daemon      = dbus_ifaces["daemon"] ## @dbus.service.method('org.wicd.daemon')
-        wireless    = dbus_ifaces["wireless"] ## @dbus.service.method('org.wicd.daemon.wireless')
-        wired       = dbus_ifaces["wired"]    ## @
-        
-    
-        ### BlueZ
-        try:
-            proxy_obj = bus.get_object("org.bluez", "/")
-            manager = dbus.Interface(proxy_obj,"org.freedesktop.DBus.ObjectManager")
-            objects = manager.GetManagedObjects()
-            
-            for path, interfaces in objects.iteritems():
-                if "org.bluez.Device1" in interfaces:
-                    devices[path] = interfaces["org.bluez.Device1"] ## like /org/bluez/hci0/dev_xx_xx_xx_yy_yy_yy
-        
-            proxy_obj = bus.get_object("org.bluez", "/org/bluez/hci0")
-            adapter = dbus.Interface(proxy_obj, "org.bluez.Adapter1")
-        except Exception as e:
-            print(str(e))
-        
-        if not daemon:
-            print("Error connecting to wicd via D-Bus")
+    # global bus,daemon,wireless,wired
+    # global manager,objects,adapter,devices
+    # 
+    # try:
+    #     dbusmanager.connect_to_dbus()
+    # except dbus.DBusException:
+    #     print >> sys.stderr,\
+    #         _("Can't connect to wicd daemon,trying to start it automatically...")
+    # else:
+    #     bus = dbusmanager.get_bus()
+    #     dbus_ifaces = dbusmanager.get_dbus_ifaces()
+    #     daemon      = dbus_ifaces["daemon"] ## @dbus.service.method('org.wicd.daemon')
+    #     wireless    = dbus_ifaces["wireless"] ## @dbus.service.method('org.wicd.daemon.wireless')
+    #     wired       = dbus_ifaces["wired"]    ## @
+    #     
+    # 
+    #     ### BlueZ
+    #     try:
+    #         proxy_obj = bus.get_object("org.bluez", "/")
+    #         manager = dbus.Interface(proxy_obj,"org.freedesktop.DBus.ObjectManager")
+    #         objects = manager.GetManagedObjects()
+    #         
+    #         for path, interfaces in objects.iteritems():
+    #             if "org.bluez.Device1" in interfaces:
+    #                 devices[path] = interfaces["org.bluez.Device1"] ## like /org/bluez/hci0/dev_xx_xx_xx_yy_yy_yy
+    #     
+    #         proxy_obj = bus.get_object("org.bluez", "/org/bluez/hci0")
+    #         adapter = dbus.Interface(proxy_obj, "org.bluez.Adapter1")
+    #     except Exception as e:
+    #         print(str(e))
+    #     
+    #     if not daemon:
+    #         print("Error connecting to wicd via D-Bus")
 
         
         
