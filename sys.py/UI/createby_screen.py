@@ -3,11 +3,11 @@
 import pygame
 import base64
 ## local package import
-from full_screen import FullScreen
-from skin_manager import MySkinManager
-from createby_clockworkpi import createby_clockworkpi_b64
+from UI.full_screen import FullScreen
+from UI.skin_manager import MySkinManager
+from UI.createby_clockworkpi import createby_clockworkpi_b64
 
-from constants   import Width,Height
+from UI.constants   import Width,Height
 
 class CreateByScreen(FullScreen):
 

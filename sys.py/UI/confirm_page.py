@@ -6,13 +6,13 @@ import os
 from libs.roundrects import aa_round_rect
 
 #UI lib
-from constants import Width,Height,ICON_TYPES
-from page   import Page,PageSelector
-from label  import Label
-from util_funcs import midRect
-from keys_def   import CurKeys
-from skin_manager import MySkinManager
-from lang_manager import MyLangManager
+from UI.constants import Width,Height,ICON_TYPES
+from UI.page   import Page,PageSelector
+from UI.label  import Label
+from UI.util_funcs import midRect
+from UI.keys_def   import CurKeys
+from UI.skin_manager import MySkinManager
+from UI.lang_manager import MyLangManager
 
 
 class ListPageSelector(PageSelector):

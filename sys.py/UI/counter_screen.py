@@ -4,12 +4,12 @@ import pygame
 import gobject
 import subprocess
 ## local package import
-from constants   import Width,Height,RUNSYS
-from label       import Label
+from UI.constants   import Width,Height,RUNSYS
+from UI.label       import Label
 
-from full_screen import FullScreen
-from skin_manager import MySkinManager
-from lang_manager import MyLangManager
+from UI.full_screen import FullScreen
+from UI.skin_manager import MySkinManager
+from UI.lang_manager import MyLangManager
 
 import config
 
