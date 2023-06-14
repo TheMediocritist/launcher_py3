@@ -1,4 +1,5 @@
 import pygame
+import config
 import configparser
 import os
 
