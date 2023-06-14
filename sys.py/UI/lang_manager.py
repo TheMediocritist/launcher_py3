@@ -67,7 +67,7 @@ class LangManager(object):
         
         try:
             self._Config.read("langs/"+self._ConfigFileName)
-        except Exception, e:
+        except Exception as e:
             print("read lang ini error %s" % str(e))
             return
         else:
@@ -76,7 +76,7 @@ class LangManager(object):
                 for i in lang_opts:
                     try:
                         self._Langs[i] = self._Config.get("Langs", i)
-                    except Exception, e:
+                    except Exception as e:
                         print("error %s" % str(e))
                         continue
     
