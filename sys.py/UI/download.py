@@ -42,11 +42,11 @@ class Download(Thread):
 
     def run(self):
         def run(self):
-        c = pycurl.Curl()
-        c.setopt(pycurl.URL, self.url)
-        c.setopt(pycurl.FOLLOWLOCATION, True)
-        c.setopt(pycurl.MAXREDIRS, 4)
-        c.setopt(c.VERBOSE, True)
+            c = pycurl.Curl()
+            c.setopt(pycurl.URL, self.url)
+            c.setopt(pycurl.FOLLOWLOCATION, True)
+            c.setopt(pycurl.MAXREDIRS, 4)
+            c.setopt(c.VERBOSE, True)
 
         #c.setopt(pycurl.CONNECTTIMEOUT, 20)
         
