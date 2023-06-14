@@ -24,7 +24,7 @@ from UI.config import Battery,RPC
 
 from libs.roundrects import aa_round_rect
 
-from libs.DBUS        import is_wifi_connected_now,wifi_strength
+from libs.DBUS import is_wifi_connected_now,wifi_strength
 
 icon_base_path = MySkinManager.GiveIcon("gameshell/titlebar_icons/")
 class TitleBar(Widget):
@@ -117,7 +117,7 @@ class TitleBar(Widget):
         try:
 	        m = alsaaudio.Mixer()
 	        vol = m.getvolume()[0]	
-        except Exception,e:
+        except Exception as e:
             print(str(e))
             vol = 0
 
