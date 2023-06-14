@@ -506,7 +506,7 @@ def aria2_ws(main_screen):
         return
 
 
-@misc.threaded
+#@misc.threaded
 def socket_thread(main_screen):
     global everytime_keydown
 
