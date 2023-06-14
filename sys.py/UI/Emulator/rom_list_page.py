@@ -26,7 +26,7 @@ from UI.scroller   import ListScroller
 from UI.skin_manager import MySkinManager
 from UI.lang_manager import MyLangManager
 
-from rom_so_confirm_page import RomSoConfirmPage
+from UI.Emulator.rom_so_confirm_page import RomSoConfirmPage
 
 from UI.Emulator.list_item  import ListItem
 import config

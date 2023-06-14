@@ -13,8 +13,8 @@ from UI.icon_pool           import MyIconPool
 from UI.keys_def            import CurKeys, IsKeyStartOrA, IsKeyMenuOrB
 from UI.lang_manager        import MyLangManager
 
-from rom_list_page import RomListPage
-from fav_list_page import FavListPage
+from UI.Emulator.rom_list_page import RomListPage
+from UI.Emulator.fav_list_page import FavListPage
 
 class FavDeleteConfirmPage(DeleteConfirmPage):
     
