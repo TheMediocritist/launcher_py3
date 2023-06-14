@@ -270,7 +270,7 @@ class MPDSpectrumPage(Page):
                 os.close(self._FIFO)
                 self._FIFO = None
                     
-            except Exception, e:
+            except Exception as e:
                 print(e)
                 
             self._KeepReading = False

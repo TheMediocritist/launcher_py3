@@ -263,7 +263,7 @@ class UpdatePage(Page):
                             pygame.time.delay(765)
                             
                     return True
-                except Exception, e:
+                except Exception as e:
                     print("r.json() error %s" % str(e))
                 
             else:
