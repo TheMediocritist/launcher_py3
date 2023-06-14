@@ -123,7 +123,7 @@ class SoundPage(Page):
         try:
             m = alsaaudio.Mixer()
             self._MySlider.SetValue(m.getvolume()[0])
-        except Exception,e:
+        except Exception as e:
             print(str(e))
             self._MySlider.SetValue(0)
 
@@ -132,7 +132,7 @@ class SoundPage(Page):
         try:
             m = alsaaudio.Mixer()
             self._MySlider.SetValue(m.getvolume()[0])
-        except Exception,e:
+        except Exception as e:
             print(str(e))
                 
     def WhenSliderDrag(self,value): ##value 0-100

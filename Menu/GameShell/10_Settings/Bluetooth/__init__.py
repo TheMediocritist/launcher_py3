@@ -51,7 +51,7 @@ class BleForgetConfirmPage(ConfirmPage):
             try:
                 #self._Parent._Adapter.RemoveDevice()
                 print("try to RemoveDevice")
-            except Exception,e:
+            except Exception as e:
                 print(str(e))
             
             pygame.time.delay(400)
@@ -190,7 +190,7 @@ class BleInfoPage(Page):
         
         try:
             adapter.RemoveDevice(dev)
-        except Exception,e:
+        except Exception as e:
             err_name = e.get_dbus_name()
             if err_name == "org.freedesktop.DBus.Error.NoReply":
                 self._Screen._MsgBox.SetText("DBus noreply")
@@ -223,7 +223,7 @@ class BleInfoPage(Page):
         
         try:
             dev.Disconnect()
-        except Exception,e:
+        except Exception as e:
             err_name = e.get_dbus_name()
             if err_name == "org.freedesktop.DBus.Error.NoReply":
                 self._Screen._MsgBox.SetText("DBus noreply")
@@ -535,7 +535,7 @@ class BluetoothPage(Page):
         try:
             dev.Pair(reply_handler=self._Leader._MyAgent.pair_reply, 
                                 error_handler=self._Leader._MyAgent.pair_error,timeout=60000)
-        except Exception,e:
+        except Exception as e:
             print(str(e))        
         
         
@@ -552,7 +552,7 @@ class BluetoothPage(Page):
             for path, interfaces in objects.iteritems():
                 if "org.bluez.Device1" in interfaces:
                     devices[path] = interfaces["org.bluez.Device1"] ## like /org/bluez/hci0/dev_xx_xx_xx_yy_yy_yy
-        except Exception,e:
+        except Exception as e:
             print(str(e))
             devices={}
         
@@ -605,12 +605,12 @@ class BluetoothPage(Page):
         if self._Adapter!= None:
             try:
                 self._Adapter.StopDiscovery()
-            except Exception,e:
+            except Exception as e:
                 print(str(e))
             
             try:
                 self._Adapter.StartDiscovery()
-            except Exception,e:
+            except Exception as e:
                 err_name = e.get_dbus_name()
                 if err_name == "org.freedesktop.DBus.Error.NoReply":
                     print("start discovery timeout")
@@ -644,7 +644,7 @@ class BluetoothPage(Page):
             if self._Adapter != None:
                 try:
                     self._Adapter.StopDiscovery()
-                except Exception,e:
+                except Exception as e:
                     print(str(e))
                 
                 _connecting = self.CheckIfBluetoothConnecting()

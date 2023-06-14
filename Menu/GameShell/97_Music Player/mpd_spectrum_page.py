@@ -49,7 +49,7 @@ class PIFI(object):
                 pass
             else:
                 self._samples_buffer = rawSamples
-        except Exception,e:
+        except Exception as e:
             pass
 
         if self._samples_buffer == None:
@@ -392,7 +392,7 @@ class MPDSpectrumPage(Page):
                         self._vis_values[i] = value
 
 
-        except Exception,e:
+        except Exception as e:
             print(e)
             return
         else: # got line

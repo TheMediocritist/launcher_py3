@@ -37,7 +37,7 @@ class BleAgent(dbus.service.Object):
         print("dev_connect %s" % path)
         try:
             dev.Connect() 
-        except Exception,e:
+        except Exception as e:
             print(str(e))
     
     @dbus.service.method(AGENT_INTERFACE,in_signature="", out_signature="")
@@ -115,7 +115,7 @@ class BleAgent(dbus.service.Object):
             err_msg ="Already Exists"
             try:
                 adapter.RemoveDevice(self.device_obj)
-            except Exception,e:
+            except Exception as e:
                 print("pair_error forget err:",str(e))
         
         elif err_name == "org.bluez.Error.AuthenticationFailed":
@@ -208,7 +208,7 @@ class BleAgentPairPage(Page):
             if self._dev_obj != None:
                 try:
                     self._dev_obj.CancelPairing()
-                except Exception,e:
+                except Exception as e:
                     print(str(e))
             
             self.ReturnToUpLevelPage()
