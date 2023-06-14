@@ -84,7 +84,7 @@ class LangManager(object):
         #print("english_key_str", english_key_str)
         if english_key_str in self._Langs:
             #print( self._Langs[english_key_str]  )
-            return self._Langs[english_key_str].decode("utf8")
+            return self._Langs[english_key_str]
         else:
             return english_key_str
     
