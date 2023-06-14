@@ -5,7 +5,7 @@ import platform
 import pygame
 import glob
 #import math
-import  commands
+import  subprocess
 
 #from beeprint import pp
 from libs.roundrects import aa_round_rect

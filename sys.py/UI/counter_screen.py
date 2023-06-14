@@ -2,7 +2,7 @@
 
 import pygame
 import gobject
-import commands
+import subprocess
 ## local package import
 from constants   import Width,Height,RUNSYS
 from label       import Label
