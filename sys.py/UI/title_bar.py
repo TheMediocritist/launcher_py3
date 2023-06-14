@@ -20,7 +20,7 @@ from UI.lang_manager import MyLangManager
 from UI.util_funcs  import midRect,SwapAndShow,FileExists
 from UI.skin_manager import MySkinManager
 from UI.widget      import Widget
-from UI.config import Battery,RPC
+from config import Battery,RPC
 
 from libs.roundrects import aa_round_rect
 
