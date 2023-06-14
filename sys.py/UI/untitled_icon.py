@@ -11,9 +11,9 @@ from datetime import datetime
 import base64
 from beeprint import pp
 
-from util_funcs import midRect
+from UI.util_funcs import midRect
 
-from skin_manager import MySkinManager
+from UI.skin_manager import MySkinManager
 
 BlankPng = MySkinManager.GiveIcon("gameshell/blank.png")  # 80x80
 ## use blank circle as bg, Two alpha As Icon Label

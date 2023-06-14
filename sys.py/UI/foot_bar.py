@@ -5,15 +5,15 @@ import os
 
 
 ##local import
-from constants  import Width,Height,ICON_TYPES,ALIGN
-from util_funcs import FileExists,midRect
-from icon_item  import IconItem
-from multi_icon_item import MultiIconItem
-from icon_pool  import MyIconPool
-from libs.roundrects import aa_round_rect
-from lang_manager import MyLangManager
-from widget      import Widget
-from skin_manager import MySkinManager
+from UI.constants  import Width,Height,ICON_TYPES,ALIGN
+from UI.util_funcs import FileExists,midRect
+from UI.icon_item  import IconItem
+from UI.multi_icon_item import MultiIconItem
+from UI.icon_pool  import MyIconPool
+from UI.libs.roundrects import aa_round_rect
+from UI.lang_manager import MyLangManager
+from UI.widget      import Widget
+from UI.skin_manager import MySkinManager
 
 import config
 

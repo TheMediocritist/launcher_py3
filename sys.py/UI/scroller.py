@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*- 
 import pygame
 
-from util_funcs  import midRect
+from UI.util_funcs  import midRect
 
 from libs.roundrects import aa_round_rect
 
-from skin_manager import MySkinManager
+from UI.skin_manager import MySkinManager
 
 class ListScroller(object):
     _PosX = 0

@@ -3,11 +3,11 @@
 import pygame
 
 ## local import
-from constants  import icon_width,icon_height,ICON_TYPES,ALIGN,icon_ext,Width,Height
-from util_funcs import color_surface,midRect
-from label      import Label
-from lang_manager import MyLangManager
-from widget     import Widget 
+from UI.constants  import icon_width,icon_height,ICON_TYPES,ALIGN,icon_ext,Width,Height
+from UI.util_funcs import color_surface,midRect
+from UI.label      import Label
+from UI.lang_manager import MyLangManager
+from UI.widget     import Widget 
 class IconItem(Widget):
     _ImageName=""
     _ImgSurf = None

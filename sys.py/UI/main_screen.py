@@ -14,24 +14,24 @@ from datetime import datetime
 from beeprint import pp
 
 ## local package import
-from constants   import ICON_TYPES,icon_ext,icon_width,icon_height,RUNEVT
-from icon_item   import IconItem
-from page        import Page,PageStack
-from title_bar   import TitleBar
-from foot_bar    import FootBar
-from constants   import Width,Height
-from util_funcs  import midRect,FileExists,ReplaceSuffix,ReadTheFileContent,CmdClean,MakeExecutable,SwapAndShow
-from keys_def    import CurKeys
-from label       import Label
-from untitled_icon import UntitledIcon
-from Emulator    import MyEmulator
-from CommercialSoftwarePackage import MyCommercialSoftwarePackage
+from UI.constants   import ICON_TYPES,icon_ext,icon_width,icon_height,RUNEVT
+from UI.icon_item   import IconItem
+from UI.page        import Page,PageStack
+from UI.title_bar   import TitleBar
+from UI.foot_bar    import FootBar
+from UI.constants   import Width,Height
+from UI.util_funcs  import midRect,FileExists,ReplaceSuffix,ReadTheFileContent,CmdClean,MakeExecutable,SwapAndShow
+from UI.keys_def    import CurKeys
+from UI.label       import Label
+from UI.untitled_icon import UntitledIcon
+from UI.Emulator    import MyEmulator
+from UI.CommercialSoftwarePackage import MyCommercialSoftwarePackage
 
-from skin_manager import MySkinManager
-from lang_manager import MyLangManager
-from widget       import Widget
+from UI.skin_manager import MySkinManager
+from UI.lang_manager import MyLangManager
+from UI.widget       import Widget
 
-from counter_screen import CounterScreen
+from UI.counter_screen import CounterScreen
 
 class MessageBox(Label):
     _Parent = None

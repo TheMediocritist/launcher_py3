@@ -11,7 +11,7 @@ import pygame
 #from beeprint import pp
 
 ## local package import
-from constants   import Width,Height
+from UI.constants   import Width,Height
 
 
 class FullScreen(object):

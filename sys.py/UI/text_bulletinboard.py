@@ -4,12 +4,12 @@ import pygame
 from libs.roundrects import aa_round_rect
 
 ## local UI import
-from page         import Page,PageStack,PageSelector
-from label        import Label
-from skin_manager import MySkinManager
-from lang_manager import MyLangManager
-from widget       import Widget 
-from textarea     import Textarea
+from UI.page         import Page,PageStack,PageSelector
+from UI.label        import Label
+from UI.skin_manager import MySkinManager
+from UI.lang_manager import MyLangManager
+from UI.widget       import Widget 
+from UI.textarea     import Textarea
 
 class Word:
     _T = ""

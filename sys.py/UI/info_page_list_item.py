@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*- 
 
 import pygame 
-from label  import Label
-from skin_manager import MySkinManager
-from widget     import Widget
+from UI.label import Label
+from UI.skin_manager import MySkinManager
+from UI.widget import Widget
 class InfoPageListItem(Widget):
     _Height = 30
 

@@ -12,15 +12,15 @@ from datetime import datetime
 import alsaaudio
 
 ##local import
-from constants   import ICON_TYPES,Width,Height
-from icon_item   import IconItem
-from multi_icon_item import MultiIconItem
-from icon_pool   import MyIconPool
-from lang_manager import MyLangManager
-from util_funcs  import midRect,SwapAndShow,FileExists
-from skin_manager import MySkinManager
-from widget      import Widget
-from config import Battery,RPC
+from UI.constants   import ICON_TYPES,Width,Height
+from UI.icon_item   import IconItem
+from UI.multi_icon_item import MultiIconItem
+from UI.icon_pool   import MyIconPool
+from UI.lang_manager import MyLangManager
+from UI.util_funcs  import midRect,SwapAndShow,FileExists
+from UI.skin_manager import MySkinManager
+from UI.widget      import Widget
+from UI.config import Battery,RPC
 
 from libs.roundrects import aa_round_rect
 

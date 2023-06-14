@@ -4,10 +4,10 @@ import pygame
 #from beeprint import pp
 
 ## local import
-from constants  import icon_width,icon_height,ICON_TYPES,ALIGN,icon_ext,Width,Height
-from util_funcs import color_surface,midRect
-from label      import Label
-from icon_item  import IconItem
+from UI.constants  import icon_width,icon_height,ICON_TYPES,ALIGN,icon_ext,Width,Height
+from UI.util_funcs import color_surface,midRect
+from UI.label      import Label
+from UI.icon_item  import IconItem
 
 ##Resource file contains multi icons in single image
 ##usually the Image contains icons in Vertical, convert 1.png 2.png 3.png -append out.png

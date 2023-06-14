@@ -2,9 +2,9 @@
 
 import pygame
 
-from skin_manager import MySkinManager
-from lang_manager import MyLangManager
-from widget       import Widget
+from UI.skin_manager import MySkinManager
+from UI.lang_manager import MyLangManager
+from UI.widget       import Widget
 
 class MultiLabel(Widget): ##Multi Line Label 
     _Width=135
