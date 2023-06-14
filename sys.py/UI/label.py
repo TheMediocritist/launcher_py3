@@ -5,12 +5,12 @@ import pygame
 #import base64
 #from beeprint import pp
 from UI.constants import Width,Height
-from util_funcs  import midRect
+from UI.util_funcs  import midRect
 
 #UI lib
-from skin_manager import MySkinManager
-from lang_manager import MyLangManager
-from widget       import Widget
+from UI.skin_manager import MySkinManager
+from UI.lang_manager import MyLangManager
+from UI.widget       import Widget
 class Label(Widget):
     _Text=""
     _FontObj=None
