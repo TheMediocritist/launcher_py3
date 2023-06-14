@@ -4,7 +4,7 @@ import pygame
 
 #import base64
 #from beeprint import pp
-from constants import Width,Height
+from UI.constants import Width,Height
 from util_funcs  import midRect
 
 #UI lib
