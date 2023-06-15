@@ -16,7 +16,7 @@ from UI.skin_manager import MySkinManager
 # | Icon  Text.....    > |
 # ------------------------
 
-import Menu.GameShell.10_Settings.myvars # icons_path
+import Menu.GameShell.10Settings.myvars # icons_path
 
 class ListItemIcon(IconItem):
 

@@ -19,7 +19,7 @@ from UI.multi_icon_item import MultiIconItem
 
 from UI.icon_pool  import MyIconPool
 
-import Menu.GameShell.10_Settings.myvars
+import Menu.GameShell.10Settings.myvars
 
 class SoundSlider(Slider):
     OnChangeCB = None

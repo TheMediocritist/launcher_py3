@@ -2,7 +2,7 @@
 
 from sound_page import SoundPage
 
-import Menu.GameShell.10_Settings.myvars
+import Menu.GameShell.10Settings.myvars
 
 def InitSoundPage(main_screen):
 

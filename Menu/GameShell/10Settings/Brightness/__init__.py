@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*- 
 
 ## local UI import
-import Menu.GameShell.10_Settings.pages
-import Menu.GameShell.10_Settings.myvars
+import Menu.GameShell.10Settings.pages
+import Menu.GameShell.10Settings.myvars
 
 def Init(main_screen):
-    pages.InitSoundPage(main_screen)
+    pages.InitBrightnessPage(main_screen)
 
 def API(main_screen):
     
     if main_screen !=None:
         main_screen.PushCurPage()
-        main_screen.SetCurPage(myvars.SoundPage)
+        main_screen.SetCurPage(myvars.BrightnessPage)
         main_screen.Draw()
         main_screen.SwapAndShow()
         

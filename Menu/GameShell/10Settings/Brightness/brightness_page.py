@@ -16,7 +16,7 @@ from UI.slider     import Slider
 from UI.icon_pool  import MyIconPool
 from UI.multi_icon_item import MultiIconItem
 from config import BackLight
-import Menu.GameShell.10_Settings.myvars
+import Menu.GameShell.10Settings.myvars
 
 class BSlider(Slider):
 

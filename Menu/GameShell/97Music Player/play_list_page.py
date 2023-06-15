@@ -20,7 +20,7 @@ from UI.scroller   import ListScroller
 
 from list_item  import ListItem
 
-import Menu.GameShell.10_Settings.myvars
+import Menu.GameShell.10Settings.myvars
 
 class ListPageSelector(PageSelector):
     _BackgroundColor = MySkinManager.GiveColor('Front')

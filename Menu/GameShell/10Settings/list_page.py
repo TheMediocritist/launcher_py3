@@ -18,7 +18,7 @@ from UI.info_page_selector import InfoPageSelector
 
 from list_item  import ListItem
 
-import Menu.GameShell.10_Settings.myvars
+import Menu.GameShell.10Settings.myvars
 
 class ListPage(Page):
 

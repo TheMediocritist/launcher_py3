@@ -20,7 +20,7 @@ from UI.lang_manager import MyLangManager
 from list_item  import ListItem
 
 
-import Menu.GameShell.10_Settings.myvars
+import Menu.GameShell.10Settings.myvars
 
 
 class MusicLibStack:

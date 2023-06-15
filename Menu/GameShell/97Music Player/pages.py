@@ -5,7 +5,7 @@ from libs.MPD import poller
 from play_list_page      import PlayListPage
 from music_lib_list_page import MusicLibListPage
 from mpd_spectrum_page   import MPDSpectrumPage
-import Menu.GameShell.10_Settings.myvars
+import Menu.GameShell.10Settings.myvars
 
 from config import MPD_socket
 
