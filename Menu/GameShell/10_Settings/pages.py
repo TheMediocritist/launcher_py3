@@ -2,7 +2,7 @@
 
 from list_page import ListPage
 
-import myvars
+import Menu.GameShell.10_Settings.myvars
 
 def InitListPage(main_screen):
 

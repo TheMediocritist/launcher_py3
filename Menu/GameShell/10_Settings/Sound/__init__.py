@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*- 
 
 ## local UI import
-import pages
-import myvars
+import Menu.GameShell.10_Settings.pages
+import Menu.GameShell.10_Settings.myvars
 
 def Init(main_screen):
     pages.InitSoundPage(main_screen)

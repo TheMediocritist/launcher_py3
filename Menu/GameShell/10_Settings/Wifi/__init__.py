@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*- 
 
 ## local UI import
-import pages
-import myvars
+import Menu.GameShell.10_Settings.pages
+import Menu.GameShell.10_Settings.myvars
 """
 try:
     from icons import preload

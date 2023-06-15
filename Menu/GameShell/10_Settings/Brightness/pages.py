@@ -2,7 +2,7 @@
 
 from brightness_page import BrightnessPage
 
-import myvars
+import Menu.GameShell.10_Settings.myvars
 
 def InitBrightnessPage(main_screen):
 

@@ -26,7 +26,7 @@ from threading  import Thread
 
 from list_item  import ListItem
 
-import myvars
+import Menu.GameShell.10_Settings.myvars
 
 class PIFI(object):
     _MPD_FIFO = "/tmp/mpd.fifo"

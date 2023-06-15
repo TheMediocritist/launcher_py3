@@ -19,7 +19,7 @@ from libs.DBUS      import bus,daemon,wireless,wired
 from UI.keyboard import Keyboard
 from wifi_list import WifiList
 
-import myvars
+import Menu.GameShell.10_Settings.myvars
 
 
 def InitScanPage(main_screen):

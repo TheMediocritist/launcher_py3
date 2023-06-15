@@ -13,7 +13,7 @@ from UI.lang_manager import MyLangManager
 # | Icon  Text.....    > |
 # ------------------------
 
-import myvars # icons_path
+import Menu.GameShell.10_Settings.myvars # icons_path
 
 
 class ListItem(object):

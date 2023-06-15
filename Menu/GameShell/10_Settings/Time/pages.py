@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 
 from timezone_lib_list_page import TimezoneListPage
-import myvars
+import Menu.GameShell.10_Settings.myvars
 
 def InitTimePage(main_screen):
     myvars.TimePage = None

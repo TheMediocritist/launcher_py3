@@ -3,8 +3,8 @@
 import pygame
 
 ## local UI import
-import pages
-import myvars
+import Menu.GameShell.10_Settings.pages
+import Menu.GameShell.10_Settings.myvars
 
 def Init(main_screen):
     pages.InitTimezoneListPage(main_screen)

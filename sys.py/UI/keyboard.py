@@ -19,7 +19,7 @@ from libs.roundrects import aa_round_rect
 from textarea  import Textarea
 from text_item import TextItem
 
-import myvars
+import Menu.GameShell.10_Settings.myvars
 
 class KeyboardIcon(IconItem):
     _Color = MySkinManager.GiveColor('Text')

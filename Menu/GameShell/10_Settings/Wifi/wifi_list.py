@@ -24,7 +24,7 @@ from libs.DBUS     import is_wifi_connected_now
 
 from net_item import NetItem
 
-import myvars
+import Menu.GameShell.10_Settings.myvars
 
 class WifiDisconnectConfirmPage(ConfirmPage):
 
