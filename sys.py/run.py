@@ -17,7 +17,8 @@ import libs.websocket as websocket
 #from wicd import wpath
 #from wicd import dbusmanager
 import time
-import gobject
+import gi
+from gi.repository import GLib, Gtk, GObject
 
 import socket
 import pygame
@@ -640,9 +641,9 @@ if __name__ == '__main__':
     
     setup_dbus()
 
-    gobject.threads_init()
+    gtk.gdk.threads_init()
     
-    gobject_main_loop = gobject.MainLoop()
+    gobject_main_loop = gObject.MainLoop()
 
 #    if pygame.display.get_active() == True:
 #        print("I am actived")
