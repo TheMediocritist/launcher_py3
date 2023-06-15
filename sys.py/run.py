@@ -642,7 +642,7 @@ if __name__ == '__main__':
     
     setup_dbus()
 
-    gtk.gdk.threads_init()
+    Gtk.gdk.threads_init()
     
     gobject_main_loop = gObject.MainLoop()
 
