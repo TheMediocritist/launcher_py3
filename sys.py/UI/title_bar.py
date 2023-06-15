@@ -202,7 +202,7 @@ class TitleBar(Widget):
             self._Icons["bluetooth"]._IconIndex = 2
             return
         else:
-            out = csubprocess.getstatusoutput("sudo rfkill list | grep hci0 -A 2 | grep yes")
+            out = subprocess.getstatusoutput("sudo rfkill list | grep hci0 -A 2 | grep yes")
             if len(out[1]) > 10:
                 self._Icons["bluetooth"]._IconIndex = 1
                 return
