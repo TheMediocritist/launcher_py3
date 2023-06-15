@@ -13,6 +13,7 @@ from beeprint import pp
 
 
 ## local UI import
+import UI.main_screen
 import pages
 import myvars
 
