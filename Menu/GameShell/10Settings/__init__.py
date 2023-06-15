@@ -15,7 +15,7 @@ from beeprint import pp
 ## local UI import
 import UI.main_screen
 import pages
-import myvars
+#import myvars
 
 def Init(main_screen):
     pages.InitListPage(main_screen)
