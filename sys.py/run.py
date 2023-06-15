@@ -18,6 +18,7 @@ import libs.websocket as websocket
 #from wicd import dbusmanager
 import time
 import gi
+gi.require_version('Gtk', '3.0')
 from gi.repository import GLib, Gtk, GObject
 
 import socket
