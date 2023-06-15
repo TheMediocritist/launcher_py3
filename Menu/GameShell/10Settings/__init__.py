@@ -14,8 +14,8 @@ from beeprint import pp
 
 ## local UI import
 import UI.main_screen
-import Menu.GameShell.10Settings.pages
-import Menu.GameShell.10Settings.myvars
+import pages
+import myvars
 
 def Init(main_screen):
     pages.InitListPage(main_screen)
