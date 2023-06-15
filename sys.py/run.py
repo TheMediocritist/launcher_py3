@@ -631,7 +631,7 @@ if __name__ == '__main__':
     os.chdir( os.path.dirname(os.path.realpath(__file__)) )
     
     SCREEN_SIZE = (Width*config.GlobalScale,Height*config.GlobalScale)
-    screen = pygame.display.set_mode(SCREEN_SIZE,pygame.DOUBLEBUF | pygame.HWSURFACE, 32)
+    screen = pygame.display.set_mode(SCREEN_SIZE,pygame.DOUBLEBUF | pygame.HWSURFACE, 8)
 
     pygame.event.set_allowed(None) 
     pygame.event.set_allowed([pygame.KEYDOWN,pygame.KEYUP,RUNEVT,RUNSYS,POWEROPT,RESTARTUI,RUNSH])
@@ -653,8 +653,8 @@ if __name__ == '__main__':
         print("This pygame does not support PNG")
         exit()
 
-    config.GlobalCanvas = pygame.Surface((Width,Height),0,32)
-    config.GlobalCanvas2 = pygame.Surface(SCREEN_SIZE ,0,32)
+    config.GlobalCanvas = pygame.Surface((Width,Height),0,8)
+    config.GlobalCanvas2 = pygame.Surface(SCREEN_SIZE ,0,8)
     
     crt_screen = CreateByScreen()
     crt_screen.Init()

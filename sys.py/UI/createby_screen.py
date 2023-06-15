@@ -15,7 +15,7 @@ class CreateByScreen(FullScreen):
     _BGColor = MySkinManager.GiveColor('Black')
     
     def Init(self):
-        self._BG = pygame.image.frombuffer(base64.b64decode(createby_clockworkpi_b64 ),(Width,Height),"RGBA")
+        self._BG = pygame.image.frombuffer(base64.b64decode(createby_clockworkpi_b64 ),(Width,Height),"P")
         self._CanvasHWND = pygame.Surface((self._Width,self._Height))
         
     
