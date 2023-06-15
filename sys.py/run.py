@@ -19,7 +19,7 @@ import libs.websocket as websocket
 import time
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import GLib, Gtk, GObject
+from gi.repository import GLib, Gtk, Gdk, GObject
 
 import socket
 import pygame
@@ -642,7 +642,7 @@ if __name__ == '__main__':
     
     setup_dbus()
 
-    Gtk.gdk.threads_init()
+    Gdk.threads_init()
     
     gobject_main_loop = gObject.MainLoop()
 
