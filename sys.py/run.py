@@ -644,7 +644,7 @@ if __name__ == '__main__':
 
     Gdk.threads_init()
     
-    gobject_main_loop = Gobject.MainLoop()
+    gobject_main_loop = GObject.MainLoop()
 
 #    if pygame.display.get_active() == True:
 #        print("I am actived")
